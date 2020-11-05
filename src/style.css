@@ -1,0 +1,284 @@
+/*
+/////////////////
+RESET STYLES
+/////////////////
+*/
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body{
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    min-height: 100%;
+    background-image: linear-gradient(-225deg, rgb(91, 204, 198) 0%, rgb(67, 172, 175) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Varela Round";
+    color: rgb(33,43,65);
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+input{
+    font-family: "Varela Round";
+
+}
+header{
+    height: 80px;
+}
+h1{
+    line-height: 80px;
+    text-align: center;
+}
+
+/*
+/////////////////
+CALCULATOR STYLES
+/////////////////
+*/
+
+.calculator{
+    margin: auto;
+    width: 300px;
+    margin-top: 50px;
+    background-color: #fdfdfd;
+    box-shadow: 2px 2px 10px rgba(0,0,0,.5);
+    overflow: hidden;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+/* CALCULATOR CONTAINER */
+
+.calculator__container{
+    width: 100%;
+    height: 500px;
+    
+}
+.calculator__show{
+    position: relative;
+    width: 300px;
+    height: 150px;
+    padding: 10px;
+    background-color: #f5f5f7;
+}
+
+.calculator__show__dots{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.calculator__show__dots span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.calculator__show__dots span:nth-child(1){
+    background-color: rgb(253,84,77);
+}
+.calculator__show__dots span:nth-child(2){
+    background-color: rgb(255,192,47);
+    margin: 0 5px;
+}
+.calculator__show__dots span:nth-child(3){
+    background-color: rgb(40,202,64);
+
+}
+
+input[type="checkbox"]{
+    -webkit-appearance: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 15px;
+    width: 30px;
+    background: #e5e5e5;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    transition: background .3s ease-in-out;
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    -ms-transition: background .3s ease-in-out;
+    -o-transition: background .3s ease-in-out;
+}
+
+input[type="checkbox"]:before{
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    background-color: #ffffff;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: left .3s ease-in-out;
+    -webkit-transition: left .3s ease-in-out;
+    -moz-transition: left .3s ease-in-out;
+    -ms-transition: left .3s ease-in-out;
+    -o-transition: left .3s ease-in-out;
+}
+
+input[type="checkbox"]:checked{
+    background: rgb(13,179,135);
+}
+
+input[type="checkbox"]:checked:before{
+    left: 0;
+    left: 16px;
+}
+
+.calculator__show__operation{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+    margin-top: 20px;
+    word-break: break-all;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    color: rgb(33,43,65);
+    text-align: right;
+    pointer-events: none;
+}
+
+.calculator__show__result{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 280px;
+    height: 65px;
+    border: none;
+    text-align: right;
+    font-size: 48px;
+    color: rgb(33,43,65);
+    background-color: transparent;
+    pointer-events: none;
+}
+
+.calculator__buttons{
+    text-align: center;
+}
+
+.button{
+    position: relative;
+    display: inline-block;
+    margin: 8px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 25px;
+    color: rgb(33,43,65);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+
+.button.operators{
+    background-color: #f5f5f7;
+}
+
+.button:nth-child(18){
+    margin-right: 78px;
+}
+.button:nth-child(19){
+    background-color: rgb(24, 212, 163);
+    color: #ffffff;
+}
+
+.button:hover{
+    background-color:white;
+    color: inherit;
+    box-shadow: 1px 1px 5px rgba(107, 94, 94, 0.2);
+}
+
+.button:active{
+    bottom: -0.5px;
+    box-shadow: 0px 0px 3px rgba(50,50,50,.2);
+    transition: all .1s ease-in-out;
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -ms-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+}
+
+.calculator__buttons{
+    padding: 5px;
+}
+
+
+/* 
+//////////////////////
+STYLES DARK MODE
+/////////////////////
+*/
+
+
+body.dark{
+    background-image: linear-gradient(-225deg, rgb(22, 165, 158) 0%, rgb(27, 82, 83) 100%);
+    color: #e5e5e5;
+}
+
+.calculator.dark *> input{
+    color: rgb(150,168,160);
+}
+.calculator.dark *> input[type="text"], 
+.calculator.dark .calculator__show__operation,
+.calculator.dark .operators{
+    color: rgb(13,179,135);
+}
+.calculator.dark .calculator__show, 
+.calculator.dark .operators{
+    background-color: rgb(33,43,65);
+}
+.calculator.dark .operators:nth-child(19){
+    color: rgb(33,43,65);
+    background-color: rgb(24,212,163);
+}
+
+.calculator.dark, .calculator.dark .calculator__buttons{
+    background-color:rgb(46,57,81);
+}
+.calculator.dark .button:hover{
+    background-color:rgb(46,57,81);
+    color: inherit;
+    box-shadow: 2px 2px 10px rgba(0,0,0,.3);
+}

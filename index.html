@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <header>
+        <h1>Calculator</h1>
+    </header>
+    <main>
+        <div class="calculator">
+            <div class="calculator__container">
+                <div class="calculator__show">
+                    <div class="calculator__show__dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <input type="checkbox" id="dark__mode" class="check__dark__mode">
+                    <label for="visor" class="calculator__show__operation"></label>
+                    <input type="text" id="visor" class="calculator__show__result" value="0">
+                </div>
+                <div class="calculator__buttons">
+                    <input type="button" class="button operators" value="C">
+                    <input type="button" class="button operators" value="&#177;">
+                    <input type="button" class="button operators" id="button__module" value="%">
+                    <input type="button" class="button operators" id="button__division" value="&#247;">
+                    <input type="button" class="button" value="7">
+                    <input type="button" class="button" value="8">
+                    <input type="button" class="button" value="9">
+                    <input type="button" class="button operators" id="button__multiplication" value="&#215;">
+                    <input type="button" class="button" value="4">
+                    <input type="button" class="button" value="5">
+                    <input type="button" class="button" value="6">
+                    <input type="button" class="button operators" value="&#8722;">
+                    <input type="button" class="button" value="1">
+                    <input type="button" class="button" value="2">
+                    <input type="button" class="button" value="3">
+                    <input type="button" class="button operators" value="&#43;">
+                    <input type="button" class="button" value="0">
+                    <input type="button" class="button" value="&#8226;">
+                    <input type="button" class="button operators equal" id="button__equal" value="&#61;">
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="src/app.js"></script>
+
+</html>
